@@ -19,7 +19,8 @@ print(ones)
 # 正态分布
 z = torch.randn(3, 4)
 print(z)
-
+z1 = torch.randn(3, 4)
+print(z1)
 t1 = torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 print(t1)
 
@@ -44,17 +45,20 @@ print(X1)
 print(Y1)
 a = torch.tensor([[[0, 1], [1, 1]], [[2, 2], [3, 2]]])
 b = torch.tensor([[[0, 1], [1, 1]], [[2, 2], [3, 2]]])
-print(torch.cat((a, b), dim=2))
-print(torch.cat((a, b), dim=1))
 print(torch.cat((a, b), dim=0))
+print(torch.cat((a, b), dim=1))
+print(torch.cat((a, b), dim=2))
 
 print(a == b)
 print(a.sum())
 
-# 广播机制  a复制行 b复制列 然后相加
+print("---------广播机制--------------")
+# 广播机制  a复制列 b复制行 然后相加
 a = torch.arange(3).reshape((3, 1))
 b = torch.arange(2).reshape((1, 2))
-
+print(a)
+print(b)
+print(a + b)
 # 索引和切片
 # 最后一个元素
 print(x[-1])
@@ -86,4 +90,4 @@ print(type(X))  # <class 'torch.Tensor'>
 A = X.numpy()
 B = torch.tensor(A)
 print(type(A))  # <class 'numpy.ndarray'>
-print(type(B))  # <class 'numpy.ndarray'>
+print(type(B))  # <class 'torch.Tensor'>

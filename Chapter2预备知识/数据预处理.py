@@ -45,6 +45,8 @@ print(df1.fillna(100))  # 用常数填充 ，默认不会修改原对象
 print(df1.fillna({0: 10, 1: 20, 2: 30}))  # 通过字典填充不同的常数，默认不会修改原对象
 print(df1.fillna(method='ffill'))  # 用前面的值来填充
 print(df1.fillna(0, inplace=True))  # inplace= True直接修改原对象
+print("----------------------------")
+print(df1)
 
 df2 = pd.DataFrame(np.random.randint(0, 10, (5, 5)))  # 随机创建一个5*5
 df2.iloc[1:4, 3] = NaN
