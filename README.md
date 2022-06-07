@@ -77,5 +77,4 @@ DeepLearning个人学习
 
 1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
 2. Git使用指南 [https://gitee.com/all-about-git](https://gitee.com/all-about-git)
-3. Github同步[https://github.com/moye12325/DeepLearning](https://github.com/moye12325/DeepLearning)
 4. Gitee同步[https://gitee.com/moye12325/DeepLearning](https://gitee.com/moye12325/DeepLearning)
