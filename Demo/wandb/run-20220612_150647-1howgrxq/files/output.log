@@ -1,0 +1,20 @@
+network: MLP(
+  (layer1): Linear(in_features=470, out_features=256, bias=True)
+  (layer2): Linear(in_features=256, out_features=64, bias=True)
+  (out): Linear(in_features=64, out_features=1, bias=True)
+)
+  0%|          | 0/2000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 143, in <module>
+    train_ls, valid_ls = train(net, train_features, train_labels, None, None, num_epochs, lr, weight_decay, batch_size)
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 117, in train
+    outputs = net(X)
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 28, in forward
+    X = F.relu(self.layer1(X))
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\nn\modules\linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: CUDA error: CUBLAS_STATUS_NOT_INITIALIZED when calling `cublasCreate(handle)`

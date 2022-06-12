@@ -1,0 +1,56 @@
+2022-06-12 15:09:54,910 INFO    MainThread:55540 [internal.py:wandb_internal():90] W&B internal server running at pid: 55540, started at: 2022-06-12 15:09:54.899888
+2022-06-12 15:09:54,911 INFO    WriterThread:55540 [datastore.py:open_for_write():75] open: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\run-3389ccow.wandb
+2022-06-12 15:09:54,915 DEBUG   SenderThread:55540 [sender.py:send():235] send: header
+2022-06-12 15:09:54,915 DEBUG   SenderThread:55540 [sender.py:send():235] send: run
+2022-06-12 15:09:55,375 DEBUG   HandlerThread:55540 [handler.py:handle_request():141] handle_request: check_version
+2022-06-12 15:09:55,381 INFO    SenderThread:55540 [dir_watcher.py:__init__():205] watching files in: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files
+2022-06-12 15:09:55,381 INFO    SenderThread:55540 [sender.py:_start_run_threads():812] run started: 3389ccow with start time 1655017793
+2022-06-12 15:09:55,381 DEBUG   SenderThread:55540 [sender.py:send():235] send: summary
+2022-06-12 15:09:55,381 INFO    SenderThread:55540 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-12 15:09:55,382 DEBUG   SenderThread:55540 [sender.py:send_request():249] send_request: check_version
+2022-06-12 15:09:55,664 DEBUG   HandlerThread:55540 [handler.py:handle_request():141] handle_request: run_start
+2022-06-12 15:09:55,678 DEBUG   HandlerThread:55540 [meta.py:__init__():35] meta init
+2022-06-12 15:09:55,678 DEBUG   HandlerThread:55540 [meta.py:__init__():49] meta init done
+2022-06-12 15:09:55,678 DEBUG   HandlerThread:55540 [meta.py:probe():209] probe
+2022-06-12 15:09:55,754 DEBUG   HandlerThread:55540 [meta.py:_setup_git():199] setup git
+2022-06-12 15:09:55,831 DEBUG   HandlerThread:55540 [meta.py:_setup_git():206] setup git done
+2022-06-12 15:09:55,831 DEBUG   HandlerThread:55540 [meta.py:_save_pip():53] save pip
+2022-06-12 15:09:55,832 DEBUG   HandlerThread:55540 [meta.py:_save_pip():67] save pip done
+2022-06-12 15:09:55,833 DEBUG   HandlerThread:55540 [meta.py:_save_conda():74] save conda
+2022-06-12 15:09:56,394 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_created():256] file/dir created: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\conda-environment.yaml
+2022-06-12 15:09:56,395 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_created():256] file/dir created: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\wandb-summary.json
+2022-06-12 15:09:56,395 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_created():256] file/dir created: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\requirements.txt
+2022-06-12 15:09:58,313 DEBUG   HandlerThread:55540 [meta.py:_save_conda():84] save conda done
+2022-06-12 15:09:58,314 DEBUG   HandlerThread:55540 [meta.py:probe():247] probe done
+2022-06-12 15:09:58,386 DEBUG   SenderThread:55540 [sender.py:send():235] send: files
+2022-06-12 15:09:58,386 DEBUG   HandlerThread:55540 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-12 15:09:58,386 INFO    SenderThread:55540 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-12 15:09:58,387 DEBUG   SenderThread:55540 [sender.py:send_request():249] send_request: stop_status
+2022-06-12 15:09:58,399 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_modified():269] file/dir modified: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\conda-environment.yaml
+2022-06-12 15:09:58,399 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_created():256] file/dir created: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\wandb-metadata.json
+2022-06-12 15:09:58,399 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_created():256] file/dir created: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\output.log
+2022-06-12 15:09:58,718 DEBUG   SenderThread:55540 [sender.py:send():235] send: telemetry
+2022-06-12 15:09:58,718 DEBUG   SenderThread:55540 [sender.py:send():235] send: telemetry
+2022-06-12 15:09:59,279 INFO    Thread-17 :55540 [upload_job.py:push():132] Uploaded file C:\Users\19423\AppData\Local\Temp\tmplm1d1wd2wandb\mdwgmrog-wandb-metadata.json
+2022-06-12 15:10:00,410 INFO    Thread-11 :55540 [dir_watcher.py:_on_file_modified():269] file/dir modified: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\output.log
+2022-06-12 15:10:12,077 WARNING MainThread:55540 [internal.py:is_dead():387] Internal process exiting, parent pid 55388 disappeared
+2022-06-12 15:10:12,077 ERROR   MainThread:55540 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-06-12 15:10:12,451 INFO    WriterThread:55540 [datastore.py:close():279] close: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\run-3389ccow.wandb
+2022-06-12 15:10:12,808 INFO    SenderThread:55540 [sender.py:finish():1111] shutting down sender
+2022-06-12 15:10:12,808 INFO    HandlerThread:55540 [handler.py:finish():806] shutting down handler
+2022-06-12 15:10:12,808 INFO    SenderThread:55540 [dir_watcher.py:finish():336] shutting down directory watcher
+2022-06-12 15:10:13,528 INFO    SenderThread:55540 [dir_watcher.py:finish():366] scan: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files
+2022-06-12 15:10:13,528 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\conda-environment.yaml conda-environment.yaml
+2022-06-12 15:10:13,528 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\config.yaml config.yaml
+2022-06-12 15:10:13,529 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\output.log output.log
+2022-06-12 15:10:13,533 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\requirements.txt requirements.txt
+2022-06-12 15:10:13,535 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\wandb-metadata.json wandb-metadata.json
+2022-06-12 15:10:13,536 INFO    SenderThread:55540 [dir_watcher.py:finish():380] scan save: D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\wandb-summary.json wandb-summary.json
+2022-06-12 15:10:13,536 INFO    SenderThread:55540 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-12 15:10:13,538 INFO    SenderThread:55540 [file_pusher.py:join():150] waiting for file pusher
+2022-06-12 15:10:14,412 INFO    Thread-19 :55540 [upload_job.py:push():132] Uploaded file D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\config.yaml
+2022-06-12 15:10:14,417 INFO    Thread-18 :55540 [upload_job.py:push():132] Uploaded file D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\conda-environment.yaml
+2022-06-12 15:10:14,422 INFO    Thread-22 :55540 [upload_job.py:push():132] Uploaded file D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\wandb-summary.json
+2022-06-12 15:10:14,459 INFO    Thread-20 :55540 [upload_job.py:push():132] Uploaded file D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\output.log
+2022-06-12 15:10:14,461 INFO    Thread-21 :55540 [upload_job.py:push():132] Uploaded file D:\Projects\DeepLearning\Demo\wandb\run-20220612_150953-3389ccow\files\requirements.txt
+2022-06-12 15:10:15,314 INFO    MainThread:55540 [internal.py:handle_exit():80] Internal process exited

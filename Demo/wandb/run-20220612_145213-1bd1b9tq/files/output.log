@@ -1,0 +1,30 @@
+network: MLP(
+  (layer1): Linear(in_features=470, out_features=256, bias=True)
+  (layer2): Linear(in_features=256, out_features=64, bias=True)
+  (out): Linear(in_features=64, out_features=1, bias=True)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  2%|▏         | 32/2000 [00:31<32:04,  1.02it/s]
+Traceback (most recent call last):
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 137, in <module>
+    train_ls, valid_ls = train(net, train_features, train_labels, None, None, num_epochs, lr, weight_decay, batch_size)
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 108, in train
+    for X, y in train_iter:
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\dataloader.py", line 527, in __next__
+    with torch.autograd.profiler.record_function(self._profile_name):
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\autograd\profiler.py", line 436, in __enter__
+    self.handle = torch.ops.profiler._record_function_enter(self.name, self.args)
+KeyboardInterrupt

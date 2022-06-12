@@ -1,0 +1,34 @@
+
+  0%|          | 0/2000 [00:00<?, ?it/s]
+network: MLP(
+  (layer1): Linear(in_features=470, out_features=256, bias=True)
+  (layer2): Linear(in_features=256, out_features=64, bias=True)
+  (out): Linear(in_features=64, out_features=1, bias=True)
+
+
+
+
+
+
+
+
+
+  1%|▏         | 25/2000 [00:21<28:29,  1.16it/s]
+Traceback (most recent call last):
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 136, in <module>
+    train_ls, valid_ls = train(net, train_features, train_labels, None, None, num_epochs, lr, weight_decay, batch_size)
+  File "D:\Projects\DeepLearning\Demo\MLP简单版.py", line 107, in train
+    for X, y in train_iter:
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\dataloader.py", line 570, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\_utils\collate.py", line 172, in default_collate
+    return [default_collate(samples) for samples in transposed]  # Backwards compatibility.
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\_utils\collate.py", line 172, in <listcomp>
+    return [default_collate(samples) for samples in transposed]  # Backwards compatibility.
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\torch\utils\data\_utils\collate.py", line 138, in default_collate
+    return torch.stack(batch, 0, out=out)
+KeyboardInterrupt

@@ -8,11 +8,9 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 # 初始化模型参数   每个图像由28*28个灰度像素值组成,图像共有10个类别。将每个图像视为具有784个输入特征 和10个类的简单分类数据集
 num_inputs, num_outputs, num_hiddens = 784, 10, 256
 
-W1 = nn.Parameter(torch.randn(
-    num_inputs, num_hiddens, requires_grad=True) * 0.01)
+W1 = nn.Parameter(torch.randn(num_inputs, num_hiddens, requires_grad=True) * 0.01)
 b1 = nn.Parameter(torch.zeros(num_hiddens, requires_grad=True))
-W2 = nn.Parameter(torch.randn(
-    num_hiddens, num_outputs, requires_grad=True) * 0.01)
+W2 = nn.Parameter(torch.randn(num_hiddens, num_outputs, requires_grad=True) * 0.01)
 b2 = nn.Parameter(torch.zeros(num_outputs, requires_grad=True))
 
 params = [W1, b1, W2, b2]

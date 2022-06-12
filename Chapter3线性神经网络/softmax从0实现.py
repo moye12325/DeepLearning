@@ -190,10 +190,16 @@ def predict_ch3(net, test_iter, n=6):  # @save
     for X, y in test_iter:
         break
     trues = d2l.get_fashion_mnist_labels(y)
+    print("==============================================")
+    print(trues)
     preds = d2l.get_fashion_mnist_labels(net(X).argmax(axis=1))
+    print("------------------------------------------------")
+    print(preds)
+
     titles = [true + '\n' + pred for true, pred in zip(trues, preds)]
     d2l.show_images(
         X[0:n].reshape((n, 28, 28)), 1, n, titles=titles[0:n])
+
 
 num_epochs = 10
 train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, updater)

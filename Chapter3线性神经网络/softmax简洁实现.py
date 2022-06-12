@@ -22,6 +22,6 @@ loss = nn.CrossEntropyLoss(reduction='none')
 # 优化算法  使⽤学习率为0.1的⼩批量随机梯度下降作为优化算法
 trainer = torch.optim.SGD(net.parameters(), lr=0.1)
 
-num_epochs = 20
+num_epochs = 5
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 d2l.plt.show()

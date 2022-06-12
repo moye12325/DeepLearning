@@ -1,0 +1,264 @@
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from C:\Users\19423\.config\wandb\settings
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from D:\Projects\DeepLearning\Demo\wandb\settings
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-06-12 03:48:42,962 WARNING MainThread:37116 [wandb_setup.py:_flush():76] interrupted
+Traceback (most recent call last):
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\IPython\core\interactiveshell.py", line 3398, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\19423\AppData\Local\Temp\ipykernel_37116\2052378596.py", line 118, in <cell line: 118>
+    wandb.init(project="kaggle_predict",
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 1021, in init
+    raise e
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 996, in init
+    wi.setup(kwargs)
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 237, in setup
+    wandb_login._login(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 297, in _login
+    wlogin.prompt_api_key()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 220, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 200, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\lib\apikey.py", line 130, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\ipykernel\kernelbase.py", line 1143, in getpass
+    return self._input_request(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\ipykernel\kernelbase.py", line 1205, in _input_request
+    raise KeyboardInterrupt("Interrupted by user") from None
+KeyboardInterrupt: Interrupted by user
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:_log_setup():428] Logging user logs to D:\Projects\DeepLearning\Demo\wandb\run-20220612_034842-2bzkrupl\logs\debug.log
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:_log_setup():429] Logging internal logs to D:\Projects\DeepLearning\Demo\wandb\run-20220612_034842-2bzkrupl\logs\debug-internal.log
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:_jupyter_setup():378] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000166A1CF0910>
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:init():462] calling init triggers
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.0005, 'weight_decay': 0.08, 'batch_size': 256, 'total_run': 500, 'network': 'in->256->64'}
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [wandb_init.py:init():515] starting backend
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-12 03:48:42,962 INFO    MainThread:37116 [backend.py:ensure_launched():217] starting backend process...
+2022-06-12 03:48:43,047 INFO    MainThread:37116 [backend.py:ensure_launched():222] started backend process with pid: 50740
+2022-06-12 03:48:43,047 INFO    MainThread:37116 [wandb_init.py:init():525] backend started and connected
+2022-06-12 03:48:43,047 INFO    MainThread:37116 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-12 03:48:43,047 INFO    MainThread:37116 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-12 03:48:43,047 INFO    MainThread:37116 [wandb_init.py:init():596] updated telemetry
+2022-06-12 03:48:43,094 INFO    MainThread:37116 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-12 03:48:44,813 INFO    MainThread:37116 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-12 03:48:45,103 INFO    MainThread:37116 [wandb_run.py:_on_init():1928] got version response 
+2022-06-12 03:48:45,103 INFO    MainThread:37116 [wandb_init.py:init():662] starting run threads in backend
+2022-06-12 03:48:47,280 INFO    MainThread:37116 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-12 03:48:47,281 INFO    MainThread:37116 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-12 03:48:47,281 INFO    MainThread:37116 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-12 03:48:47,282 INFO    MainThread:37116 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-12 03:48:47,282 INFO    MainThread:37116 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-12 03:48:47,474 INFO    MainThread:37116 [wandb_init.py:_pause_backend():341] pausing backend
+2022-06-12 03:48:47,474 INFO    MainThread:37116 [jupyter.py:save_ipynb():377] not saving jupyter notebook
+2022-06-12 15:13:01,150 INFO    MainThread:37116 [wandb_init.py:_resume_backend():350] resuming backend
+2022-06-12 15:13:03,768 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from C:\Users\19423\.config\wandb\settings
+2022-06-12 15:13:03,768 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from D:\Projects\DeepLearning\Demo\wandb\settings
+2022-06-12 15:13:03,768 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-12 15:13:03,768 INFO    MainThread:37116 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-06-12 15:13:03,769 WARNING MainThread:37116 [wandb_setup.py:_flush():76] interrupted
+Traceback (most recent call last):
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\IPython\core\interactiveshell.py", line 3398, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\19423\AppData\Local\Temp\ipykernel_37116\2052378596.py", line 118, in <cell line: 118>
+    wandb.init(project="kaggle_predict",
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 1021, in init
+    raise e
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 996, in init
+    wi.setup(kwargs)
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_init.py", line 237, in setup
+    wandb_login._login(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 297, in _login
+    wlogin.prompt_api_key()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 220, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\wandb_login.py", line 200, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\wandb\sdk\lib\apikey.py", line 130, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\ipykernel\kernelbase.py", line 1143, in getpass
+    return self._input_request(
+  File "C:\Users\19423\.conda\envs\nlp\lib\site-packages\ipykernel\kernelbase.py", line 1205, in _input_request
+    raise KeyboardInterrupt("Interrupted by user") from None
+KeyboardInterrupt: Interrupted by user
+2022-06-12 15:13:03,773 INFO    MainThread:37116 [wandb_init.py:_log_setup():428] Logging user logs to D:\Projects\DeepLearning\Demo\wandb\run-20220612_151303-3kuhtncz\logs\debug.log
+2022-06-12 15:13:03,773 INFO    MainThread:37116 [wandb_init.py:_log_setup():429] Logging internal logs to D:\Projects\DeepLearning\Demo\wandb\run-20220612_151303-3kuhtncz\logs\debug-internal.log
+2022-06-12 15:13:03,773 INFO    MainThread:37116 [wandb_init.py:init():462] calling init triggers
+2022-06-12 15:13:03,774 INFO    MainThread:37116 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.005, 'weight_decay': 0.05, 'batch_size': 256, 'total_run': 2000, 'network': 'in->256->64'}
+2022-06-12 15:13:03,774 INFO    MainThread:37116 [wandb_init.py:init():481] re-initializing run, found existing run on stack: 2bzkrupl
+2022-06-12 15:13:03,778 INFO    MainThread:37116 [wandb_run.py:_finish():1685] finishing run moye12325/kaggle_predict/2bzkrupl
+2022-06-12 15:13:03,779 INFO    MainThread:37116 [jupyter.py:save_history():435] not saving jupyter history
+2022-06-12 15:13:03,780 INFO    MainThread:37116 [jupyter.py:save_ipynb():377] not saving jupyter notebook
+2022-06-12 15:13:03,780 INFO    MainThread:37116 [wandb_init.py:_jupyter_teardown():360] cleaning up jupyter logic
+2022-06-12 15:13:03,780 INFO    MainThread:37116 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-12 15:13:03,806 INFO    MainThread:37116 [wandb_run.py:_restore():1839] restore
+2022-06-12 15:13:04,134 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 761
+}
+
+2022-06-12 15:13:04,613 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 761
+}
+
+2022-06-12 15:13:05,255 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 3
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 5501
+}
+
+2022-06-12 15:13:05,360 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:05,466 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:05,575 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:05,684 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:05,793 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 35644
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:05,900 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 35644
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,010 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 35644
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,120 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 35644
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,228 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 37785
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,338 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,446 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,555 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,662 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,771 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:06,879 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:07,683 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+
+2022-06-12 15:13:08,587 INFO    MainThread:37116 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 38424
+  total_bytes: 38424
+}
+local_info {
+}
+
+2022-06-12 15:13:09,879 INFO    MainThread:37116 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-12 15:13:09,879 INFO    MainThread:37116 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-12 15:13:09,884 INFO    MainThread:37116 [wandb_run.py:_footer_sync_info():3060] logging synced files

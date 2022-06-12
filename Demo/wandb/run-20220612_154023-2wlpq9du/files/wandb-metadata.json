@@ -1,0 +1,23 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-06-12T07:40:25.582860",
+    "startedAt": "2022-06-12T07:40:23.567705",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "Demo/MLP\u7b80\u5355\u7248.ipynb",
+    "root": "D:/Projects/DeepLearning",
+    "git": {
+        "remote": "https://gitee.com/moye12325/DeepLearning.git",
+        "commit": "d06bb7910a5a0405f98c66ff152fca9790fba7d5"
+    },
+    "email": "gengkang12325@gmail.com",
+    "host": "DESKTOP-QHP9QTC",
+    "username": "19423",
+    "executable": "C:\\Users\\19423\\.conda\\envs\\nlp\\python.exe"
+}
