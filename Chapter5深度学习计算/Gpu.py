@@ -21,4 +21,4 @@ x = torch.tensor([1, 2, 3])
 print(x.device)
 
 X = torch.ones(2, 3, device=try_gpu())
-print(x)
+print(X)
