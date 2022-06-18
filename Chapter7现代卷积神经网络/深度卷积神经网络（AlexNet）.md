@@ -61,8 +61,9 @@ lr, num_epochs = 0.01, 10
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 运行结果：
-
-
+loss 0.458, train acc 0.829, test acc 0.824  
+4915.5 examples/sec on cpu  
+![](.深度卷积神经网络（AlexNet）_images/37067edb.png)
 ### 小结
 1. AlexNet的架构与LeNet相似，但使用了更多的卷积层和更多的参数来拟合大规模的ImageNet数据集。
 

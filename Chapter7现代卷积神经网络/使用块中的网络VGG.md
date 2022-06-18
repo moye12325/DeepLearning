@@ -83,6 +83,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ```
 运行结果：
+![](.使用块中的网络VGG_images/f4ddb372.png)
+
 
 ### 小结
 * VGG-11使用可复用的卷积块构造网络。不同的VGG模型可通过每个块中卷积层数量和输出通道数量的差异来定义。
