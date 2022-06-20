@@ -58,7 +58,7 @@ class LeavesData(Dataset):
             self.train_image = np.asarray(self.data_info.iloc[1:self.train_len, 0])
             self.train_labels = np.asarray(self.data_info.iloc[1:self.train_len, 0])
             self.image_arr = self.train_image
-            self.label_arr = self.train_label
+            self.label_arr = self.train_labels
         elif mode == 'valid':
             self.vaild_image = np.asarray(self.data_info.iloc[self.train_len:, 0])
             self.valid_label = np.asarray(self.data_info.iloc[self.train_len:, 1])
@@ -72,3 +72,126 @@ class LeavesData(Dataset):
         self.real_len = len(self.image_arr)
         print('Finished reading the {} set of Leaves Dataset ({} samples found)'
               .format(mode, self.real_len))
+
+    def __getitem__(self, index):
+        # 从 image_arr中得到索引对应的文件名
+        single_image_name = self.image_arr[index]
+
+        # 读取图像文件
+        img_as_img = Image.open(self.file_path + single_image_name)
+
+        # 如果需要将RGB三通道的图片转换成灰度图片可参考下面两行
+        #         if img_as_img.mode != 'L':
+        #             img_as_img = img_as_img.convert('L')
+
+        # 设置好需要转换的变量，还可以包括一系列的nomarlize等等操作
+        if self.mode == 'train':
+            transform = transforms.Compose([
+                transforms.Resize((224, 224)),
+                transforms.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
+                transforms.ToTensor()
+            ])
+        else:
+            # valid和test不做数据增强
+            transform = transforms.Compose([
+                transforms.Resize((224, 224)),
+                transforms.ToTensor()
+            ])
+
+        img_as_img = transform(img_as_img)
+
+        if self.mode == 'test':
+            return img_as_img
+        else:
+            # 得到图像的 string label
+            label = self.label_arr[index]
+            # number label
+            number_label = class_to_num[label]
+
+            return img_as_img, number_label  # 返回每一个index对应的图片数据和对应的label
+
+    def __len__(self):
+        return self.real_len
+
+
+train_path = '../data/Classification_Leaves/train.csv'
+test_path = '../data/Classification_Leaves/test.csv'
+# csv文件中已经images的路径了，因此这里只到上一级目录
+img_path = '../data/Classification_Leaves/'
+
+train_dataset = LeavesData(train_path, img_path, mode='train')
+val_dataset = LeavesData(train_path, img_path, mode='valid')
+test_dataset = LeavesData(test_path, img_path, mode='test')
+print(train_dataset)
+print(val_dataset)
+print(test_dataset)
+
+# 加载数据
+train_loader = torch.utils.data.DataLoader(
+    dataset=train_dataset,
+    batch_size=8,
+    shuffle=False,
+    num_workers=0
+)
+val_loader = torch.utils.data.DataLoader(
+    dataset=train_dataset,
+    batch_size=8,
+    shuffle=False,
+    num_workers=0
+)
+test_loader = torch.utils.data.DataLoader(
+    dataset=train_dataset,
+    batch_size=8,
+    shuffle=False,
+    num_workers=0
+)
+
+
+def im_convert(tensor):
+    """展示数据"""
+    image = tensor.to("cpu").clone.detch()
+    image = image.numpy().squeeze()
+    image = image.transpose(1, 2, 0)
+    image = image.clip(0, 1)
+
+    return image
+
+
+fig = plt.figure(figsize=(20, 12))
+columns = 4
+rows = 2
+
+dataiter = iter(val_loader)
+inputs, classes = dataiter.next()
+
+for idx in range(columns * rows):
+    ax = fig.add_subplot(rows, columns, idx + 1, xticks=[], yticks=[])
+    ax.set_title(num_to_class[int(classes[idx])])
+    plt.imshow(im_convert(inputs[idx]))
+plt.show()
+
+
+# 看一下是在cpu还是GPU上
+def get_device():
+    return 'cuda' if torch.cuda.is_available() else 'cpu'
+
+
+device = get_device()
+print(device)
+
+
+# 是否冻住模型前面的一些层
+def set_parameter_requires_grad(model, feature_extracting):
+    if feature_extracting:
+        model = model
+        for param in model.parameters():
+            param.requires_grad = True
+
+
+# ResNet34
+def res_model(num_classes, feature_extract=False, use_pretrained=True):
+    model_ft = models.resnet34(pretrained=use_pretrained)
+    set_parameter_requires_grad(model_ft, feature_extract)
+    num_ftrs = model_ft.fc.in_features
+    model_ft.fc = nn.Sequential(nn.Linear(num_ftrs, num_classes))
+    return model_ft
