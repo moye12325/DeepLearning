@@ -58,6 +58,10 @@ Validation | Epoch 1 | acc = 0.531
 
 ### Change value of “doc_stride”
 
+doc_stride参数就是每次滑动的距离  
+
+![](.HW7_images/34aa9338.png)
+
 `self.doc_stride = 32`  Score: 0.62953
 
 ```
