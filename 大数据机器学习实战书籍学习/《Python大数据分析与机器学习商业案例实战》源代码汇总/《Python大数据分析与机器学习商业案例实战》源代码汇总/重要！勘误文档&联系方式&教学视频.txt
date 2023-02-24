@@ -1,0 +1,7 @@
+本书勘误文档，可以参考：https://shimo.im/docs/y6cCpQWqXCWvvyy8/ 《Python源代码（机器学习）》。
+
+笔者联系方式（小助手微信，可以拉进微信群）：huaxz001；
+
+笔者官方网站：www.huaxiaozhi.com；
+
+教学视频网站（有免费课和付费课）：edu.huaxiaozhi.com。
