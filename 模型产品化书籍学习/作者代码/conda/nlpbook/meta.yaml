@@ -1,0 +1,43 @@
+package:
+  name: nlpbook
+  version: 1.0.0
+source:
+  sha256: 6fe0951c39c71ec9b3a751f5e9e48351c850419a3fd9727a8622a6802378759f
+  url: https://files.pythonhosted.org/packages/f4/e8/78de79115c494517f36679e9978ae2f2f1aede55bbfa6653dea96547f141/nlpbook-1.0.0.tar.gz
+about:
+  dev_url: https://appliednlpbook.com
+  doc_url: https://appliednlpbook.com
+  home: https://appliednlpbook.com
+  license: Apache Software
+  license_family: APACHE
+  summary: Applied Natural Language Processing in the Enterprise - An O'Reilly Media
+    Publication
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - nlpbook
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  - fastai>=2.3.1
+  - transformers
+  - torchtext
+  - pyspark
+  - pytorch
+  run:
+  - pip
+  - python
+  - packaging
+  - fastai>=2.3.1
+  - transformers
+  - torchtext
+  - pyspark
+  - pytorch
+test:
+  imports:
+  - nlpbook
